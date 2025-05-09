@@ -8,7 +8,7 @@ if [ -z "$folder" ]; then
     exit 1
 fi
 
-# exclude common noisy folders and files
+# exclude
 excludes='(node_modules|CHANGELOG\.md|\.lock$|\.min\.js$|\.map$)'
 
 patterns=(
@@ -23,7 +23,7 @@ patterns=(
 echo "scanning folder: $folder"
 echo
 
-# scan all non-excluded files
+# scan 
 find "$folder" -type f | grep -Ev "$excludes" | while read -r file; do
     for pattern in "${patterns[@]}"; do
         grep -Eina "$pattern" "$file" 2>/dev/null | while read -r match; do
