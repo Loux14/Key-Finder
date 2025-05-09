@@ -9,11 +9,11 @@ fi
 
 # regex
 patterns=(
-    'api[_-]?key.{0,10}[=:\"\x27 ]+[a-zA-Z0-9_\-]{8,}'
-    'secret.{0,10}[=:\"\x27 ]+[a-zA-Z0-9_\-]{8,}'
-    'token.{0,10}[=:\"\x27 ]+[a-zA-Z0-9_\-]{8,}'
-    'authorization.{0,10}[=:\"\x27 ]+[a-zA-Z0-9_\-]{8,}'
-    'pass(word|wd)?.{0,10}[=:\"\x27 ]+[a-zA-Z0-9!@#\$%^&*()_+=\-]{4,}'
+    '[Aa][Pp][Ii][_ -]?[Kk]ey[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
+    '[Ss]ecret[_ -]?[Kk]ey[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
+    '[Tt]oken[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
+    '[Aa]uthorization[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
+    '(password|passwd|pwd)[ =:\"\x27]+[a-zA-Z0-9!@#\$%^&*()_+=\-]{6,}'
     '-----BEGIN PRIVATE KEY-----'
 )
 
