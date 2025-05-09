@@ -16,12 +16,11 @@
   - Private keys (e.g., `-----BEGIN PRIVATE KEY-----`)
 - Supports loose patterns for better catch rate
 
+![Screenshot 2025-05-09 at 4 59 23 PM](https://github.com/user-attachments/assets/e682089b-d865-4279-a2fa-d26956bffb83)
+
 
 ## Usage
 
 ```bash
 chmod +x findKey.sh
 ./findKey.sh /path/to/target_folder
-
-
-![Screenshot 2025-05-09 at 4 59 23 PM](https://github.com/user-attachments/assets/bf1e1bb1-9256-4767-9dca-7dc19ef05b24)
