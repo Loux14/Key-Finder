@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 folder="$1"
 
 if [ -z "$folder" ]; then
@@ -7,7 +8,9 @@ if [ -z "$folder" ]; then
     exit 1
 fi
 
-# regex
+# exclude common noisy folders and files
+excludes='(node_modules|CHANGELOG\.md|\.lock$|\.min\.js$|\.map$)'
+
 patterns=(
     '[Aa][Pp][Ii][_ -]?[Kk]ey[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
     '[Ss]ecret[_ -]?[Kk]ey[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
@@ -20,11 +23,11 @@ patterns=(
 echo "scanning folder: $folder"
 echo
 
-# scan
-find "$folder" -type f | while read -r file; do
+# scan all non-excluded files
+find "$folder" -type f | grep -Ev "$excludes" | while read -r file; do
     for pattern in "${patterns[@]}"; do
         grep -Eina "$pattern" "$file" 2>/dev/null | while read -r match; do
-            echo "[+] possible credential in $file:"
+            echo "[+] $file:"
             echo "    $match"
             echo
         done
