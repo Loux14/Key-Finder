@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# usage: ./findKey.sh /path/to/folder
-
 folder="$1"
 
 if [ -z "$folder" ]; then
