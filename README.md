@@ -16,6 +16,8 @@
   - Private keys (e.g., `-----BEGIN PRIVATE KEY-----`)
 - Supports loose patterns for better catch rate
 
+![Screenshot 2025-05-09 at 4 59 23 PM](https://github.com/user-attachments/assets/2dc68fca-53f7-4622-8e25-8ecf0c15d9d2)
+
 ## Usage
 
 ```bash
