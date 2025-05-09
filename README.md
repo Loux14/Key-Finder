@@ -22,3 +22,6 @@
 ```bash
 chmod +x findKey.sh
 ./findKey.sh /path/to/target_folder
+
+
+![Screenshot 2025-05-09 at 4 59 23 PM](https://github.com/user-attachments/assets/bf1e1bb1-9256-4767-9dca-7dc19ef05b24)
