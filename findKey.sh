@@ -14,7 +14,7 @@ patterns=(
     '[Tt]oken[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
     '[Aa]uthorization[ =:\"\x27]+[a-zA-Z0-9_\-]{10,}'
     '(password|passwd|pwd)[ =:\"\x27]+[a-zA-Z0-9!@#\$%^&*()_+=\-]{6,}'
-    '-----BEGIN PRIVATE KEY-----'
+    'BEGIN PRIVATE KEY'
 )
 
 echo "scanning folder: $folder"
